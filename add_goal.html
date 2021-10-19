@@ -1,0 +1,87 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/add_goal.css">
+    <title>Add goal</title>
+</head>
+<body>
+    <header>
+        <h1>Goals</h1>
+    </header>
+    <main>
+        <section>
+            <form class="goal-form-container">
+                <label class="form-label">Goal</label>
+                <input type="text" class="form-input">
+            </form>
+            <div class="goal-show-n-color-choose">
+                <div class="goal-show">
+                    <div class="stars-container">
+                        <div class="stars">✨</div>
+                    </div>
+                    <h3>Go te learn Judo</h3>
+                </div>
+                <div class="select-color">
+                    <span class="form-label">SELECT COLOR</span>
+                    <div class="colors">
+                        <!-- 43B3F4 -->
+                        <div class="clr-border">
+                            <div id="43B3F4" class="color-select"></div>
+                        </div>
+                        <!-- FD8956 -->
+                        <div class="clr-border">
+                            <div id="FD8956" class="color-select"></div>
+                        </div>
+                        <!-- FF5B60 -->
+                        <div class="clr-border">
+                            <div id="FF5B60" class="color-select"></div>
+                        </div>
+                        <!-- 3DDA91 -->
+                        <div class="clr-border">
+                            <div id="3DDA91" class="color-select"></div>
+                        </div>
+                        <!-- 2E3A57 -->
+                        <div class="clr-border">
+                            <div id="2E3A57" class="color-select"></div>
+                        </div>
+                        <!-- 838FA1 -->
+                        <div class="clr-border">
+                            <div id="838FA1" class="color-select"></div>
+                        </div>
+                        <!-- 684FF0 -->
+                        <div class="clr-border">
+                            <div id="684FF0" class="color-select"></div>
+                        </div>
+                        <!-- FF88DD -->
+                        <div class="clr-border">
+                            <div id="FF88DD" class="color-select"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="new-goal">
+            <a href="index.html"><i class='bx bxs-check-circle save-add-todo' ></i></a>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        const colors = document.querySelectorAll('.color-select')
+        const todoPreview = document.querySelector('.goal-show')
+        colors.forEach(color => {
+            color.style.backgroundColor = color.id
+            color.addEventListener('click', (e) => {
+                todoPreview.style.backgroundColor = e.target.id
+            })
+        })
+    </script>
+</body>
+</html>
