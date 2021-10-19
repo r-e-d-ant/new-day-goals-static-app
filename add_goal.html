@@ -78,6 +78,7 @@
         const todoPreview = document.querySelector('.goal-show')
         colors.forEach(color => {
             color.style.backgroundColor = color.id
+            color.parentNode.style.borderColor = color.id
             color.addEventListener('click', (e) => {
                 todoPreview.style.backgroundColor = e.target.id
             })
